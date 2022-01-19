@@ -1,9 +1,8 @@
 <template>
-    <div>
         <v-app-bar color="primary">
-            <v-img src="../assets/bird.png"></v-img>
-            <v-spacer>
+            <v-img src="../assets/bird.png" max-width="150" max-height="150"></v-img>
             <h1>BIRD WATCH</h1>
+            <v-spacer></v-spacer>
             <v-btn to="/">
                 HOME
             </v-btn>
@@ -14,7 +13,6 @@
                 ABOUT
             </v-btn>
         </v-app-bar>
-    </div>
 </template>
 
 <script>
