@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import appbar from "./components/AppBar.vue"
 export default {
   name: 'App',
@@ -17,10 +18,10 @@ export default {
   data: () => ({
     birds:[],
   }),
-  methods: {
-    async function getBirds(){
-
-    }
+  async created(){
+    let response = await axios.get('http://localhost:3000/birds');
+    this.birds = response.data;
+    console.log(this.birds);
   }
 };
 </script>
